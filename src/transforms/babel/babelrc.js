@@ -70,7 +70,7 @@ async function findBabelRc(asset) {
   // TODO: use the babel API to do this config resolution and support all of its features.
   // This is not currently possible because babel tries to actually load plugins and presets
   // while resolving the config, but those plugins might not be installed yet.
-  let config = await asset.getConfig(['.babelrc', '.babelrc.js'], {
+  let config = await asset.getConfig(['.babelrc', '.babelrc.js', 'babel.config.js'], {
     packageKey: 'babel'
   });
 
